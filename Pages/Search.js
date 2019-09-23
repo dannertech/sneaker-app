@@ -15,7 +15,7 @@ _performFetchRequest = () => {
 	return response.json();
 })
 .then(myJson => {
-    console.log(myJson._embedded);
+    console.log(myJson._embedded.products[0]);
 })
 .catch(err => {
 	console.log(err);
