@@ -57,10 +57,12 @@ _performFetchRequest = () => {
         const spinner = this.state.isLoading ? <ActivityIndicator size='large'></ActivityIndicator> : null;
         return(
             <View>
-                <Image source={adidasLogo} style={{width: 50, height: 50, marginTop: 50}}></Image>
-                <View style={{marginTop: 50}}>
-                <TextInput placeholder="Enter Male or Female" onChange={() => this._onChange(event)} ></TextInput>
-                <Button title="Search" onPress={this._performFetchRequest}/>
+                <View style={{ justifyContent: 'center', alignContent: 'center', flexDirection: 'row'}}>
+                <Image source={adidasLogo} style={{width: 150, height: 150, marginTop: 200}}></Image>
+                </View>
+                <View style={{marginTop: 60, alignContent: 'center', justifyContent: 'center', flexDirection: 'row'}}>
+                <TextInput style={{borderColor: '#000', borderWidth: 2, borderRadius: 20, color: '#000'}} placeholder="Enter Male or Female" onChange={() => this._onChange(event)} ></TextInput>
+                <Button title="Search" color='#000' onPress={this._performFetchRequest}/>
                 </View>
                 
                 {spinner}
