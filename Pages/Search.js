@@ -44,7 +44,9 @@ _performFetchRequest = () => {
         isLoading: false,
         productArray: myJson._embedded.products
     });
-    this.props.navigation.navigate('Results');
+    this.props.navigation.navigate('Results', {
+        resultsList: this.state.productArray
+    });
 
 })
 .catch(err => {
