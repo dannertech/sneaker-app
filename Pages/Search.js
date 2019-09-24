@@ -24,10 +24,11 @@ this.setState({
 
 
 _performFetchRequest = () => {
+    
     this.setState({
         isLoading: true
     })
-    fetch("https://apidojo-adidas-v1.p.rapidapi.com/products/v2/list?sort_option_id=newest-to-oldest&v_size_en_us=30a%7Cm_3.5___w_4.5&lang=en-US&limit=30&url=men&page=1", {
+    fetch("https://apidojo-adidas-v1.p.rapidapi.com/products/v2/list?sort_option_id=newest-to-oldest&v_size_en_us=30a%7Cm_3.5___w_4.5&lang=en-US&limit=30&url=" + this.state.searchString.toLowerCase() + "&page=1", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "apidojo-adidas-v1.p.rapidapi.com",
