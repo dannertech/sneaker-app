@@ -15,7 +15,10 @@ constructor(props){
 }
 
 _onChange = (event) => {
-console.log(event.nativeEvent.text)
+console.log(event.nativeEvent.text);
+this.setState({
+    searchString: event.nativeEvent.text
+})
 };
 
 
